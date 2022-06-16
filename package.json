@@ -8,7 +8,13 @@
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "prettier": "prettier --write",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "lint-staged": {
+      "*.{js,ts}": [
+        "pnpm lint",
+        "pnpm prettier"
+      ]
+    }
   },
   "dependencies": {
     "pinia": "^2.0.14",
