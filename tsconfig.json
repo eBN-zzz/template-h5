@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
-    "typeRoots": [
-      "node_modules/@types",
-      "src/types"
-   ],
+    "typeRoots": ["node_modules/@types", "src/types"],
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -17,11 +14,13 @@
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "baseUrl": "./",
-    "paths":{
+    "types": ["vite/client"],
+    "paths": {
       "@": ["src"],
-      "@/*": ["src/*"],
+      "@/*": ["src/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["dist", "node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
